@@ -1,23 +1,60 @@
 aid: aptitude-medical-systems
 name: Aptitude Medical Systems
-description: 'Aptitude Medical Systems is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+image: https://cdn.prod.website-files.com/62ec1fa0e73b133056658278/62f54303c23d65aabc22926a_opengraph.png
+description: Aptitude Medical Systems is a deep‑tech healthcare startup focused on democratizing diagnostics. It offers the Metrix molecular diagnostic
+  platform, enabling rapid, at‑home PCR testing for COVID‑19 and flu, with FDA‑cleared products and a pipeline of additional tests. The company
+  aims to provide affordable, accurate health information anytime, anywhere, improving patient outcomes and margins for urgent‑care providers.
 url: https://raw.githubusercontent.com/api-evangelist/aptitude-medical-systems/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-25'
 modified: '2026-09-25'
 tags:
-- Company
-apis: []
+- Healthcare
+- Diagnostics
+- Molecular Testing
+- Startup
+- DeepTech
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/aptitude-medical-systems-llms.txt
+- type: WellKnown
+  url: well-known/aptitude-medical-systems-well-known.yml
+- type: Hosts
+  url: hosts/aptitude-medical-systems-hosts.yml
+- type: Vendors
+  url: vendors/aptitude-medical-systems-vendors.yml
+- type: Support
+  url: https://support.aptitudemedical.com
+- type: PrivacyPolicy
+  url: https://www.aptitudemedical.com/privacy-policy
+- type: Newsroom
+  url: https://www.aptitudemedical.com/news
+- type: Documentation
+  url: https://docs.aptitudemedical.com/
+- type: DomainSecurity
+  url: security/aptitude-medical-systems-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aptitudemedical.com/
+apis:
+- name: Aptitude Medical Systems API
+  description: API providing GraphQL access to Aptitude Medical Systems services.
+  humanURL: https://shop.aptitudemedical.com/api/graphql
+  baseURL: https://shop.aptitudemedical.com/api
+  type: graphql
+  properties: []
+  aid: aptitude-medical-systems:aptitude-medical-systems-api
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
